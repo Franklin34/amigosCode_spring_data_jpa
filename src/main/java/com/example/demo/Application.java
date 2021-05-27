@@ -13,10 +13,13 @@ public class Application {
     }
 
     @Bean
-    CommandLineRunner cmd(StudentRepository studentRepository) {
+    CommandLineRunner commandLineRunner(StudentRepository studentRepository){
         return args -> {
-            Student john = new Student("John", "John", "jhon@jhon.com", 25);
-            studentRepository.save(john);
+            Student franklin = new Student("Franklin",
+                    "Sandoval",
+                    "franklin@mail.com",
+                    20);
+            studentRepository.save(franklin);
         };
     }
 
